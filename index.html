@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>JenJenDoula — Postpartum Doula & Newborn Care Specialist, Los Angeles</title>
+  <meta name="description" content="Jennifer Delg is a certified postpartum doula, newborn care specialist, and infant sleep trainer serving families across Los Angeles. 12 years of compassionate, expert support."/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary":                    "#5d0b2a",
+            "primary-container":          "#7b2440",
+            "on-primary":                 "#ffffff",
+            "on-primary-container":       "#ff91ac",
+            "secondary":                  "#795558",
+            "secondary-container":        "#feced1",
+            "on-secondary":               "#ffffff",
+            "on-secondary-container":     "#7a5658",
+            "background":                 "#fff8f6",
+            "surface":                    "#fff8f6",
+            "surface-container-low":      "#fff1eb",
+            "surface-container":          "#faebe4",
+            "surface-container-high":     "#f4e5df",
+            "surface-container-highest":  "#efdfd9",
+            "surface-dim":                "#e6d7d1",
+            "on-surface":                 "#211a16",
+            "on-surface-variant":         "#544245",
+            "outline":                    "#877275",
+            "outline-variant":            "#dac0c4",
+            "tertiary":                   "#2e2f2d",
+            "inverse-surface":            "#372f2a",
+            "inverse-on-surface":         "#fdeee7",
+            "inverse-primary":            "#ffb1c2",
+            "surface-tint":               "#9c3e5a",
+            "brand-blush":                "#D9ACAF",
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg":      "1rem",
+            "xl":      "1.5rem",
+            "2xl":     "2.5rem",
+            "3xl":     "4rem",
+            "full":    "9999px"
+          },
+          spacing: {
+            "section-padding-mobile":  "64px",
+            "section-padding-desktop": "120px",
+            "gutter":                  "24px",
+            "container-max":           "1200px",
+          },
+          fontFamily: {
+            "display-lg":         ["Libre Caslon Text"],
+            "display-lg-mobile":  ["Libre Caslon Text"],
+            "headline-md":        ["Libre Caslon Text"],
+            "headline-sm":        ["Libre Caslon Text"],
+            "body-lg":            ["DM Sans"],
+            "body-md":            ["DM Sans"],
+            "label-md":           ["DM Sans"],
+            "nav-link":           ["DM Sans"],
+          },
+          fontSize: {
+            "display-lg":        ["48px", { lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display-lg-mobile": ["36px", { lineHeight: "44px", fontWeight: "400" }],
+            "headline-md":       ["32px", { lineHeight: "40px", fontWeight: "400" }],
+            "headline-sm":       ["24px", { lineHeight: "32px", fontWeight: "400" }],
+            "body-lg":           ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md":           ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-md":          ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "nav-link":          ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .ambient-shadow {
+      box-shadow: 0 10px 40px -10px rgba(93, 11, 42, 0.10);
+    }
+    .transition-all-custom {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* Organic blob shapes for image containers */
+    .organic-blob-1 {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    /* Mirror of blob-1 — avoids stacked scaleX(-1) transforms */
+    .organic-blob-hero {
+      border-radius: 40% 60% 70% 30% / 30% 60% 40% 70%;
+    }
+    .organic-blob-2 {
+      border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF8F5] text-[#2C2420] antialiased selection:bg-brand-blush selection:text-primary">
+
+<!-- ─── NAV ─────────────────────────────────────────────────────────────── -->
+<nav class="fixed w-full top-0 z-50 bg-[#FAF8F5]/80 backdrop-blur-xl">
+  <div class="flex justify-between items-center w-full px-gutter py-5 max-w-container-max mx-auto">
+    <a class="flex items-center hover:opacity-80 transition-opacity" href="#" style="gap: 0px;">
+      <img alt="JenJenDoula logo" class="h-24 w-24 object-contain" src="./assets/logo.png"/>
+      <span class="font-headline-sm text-headline-sm text-primary" style="margin-left: -10px;">JenJenDoula</span>
+    </a>
+    <a class="hidden md:inline-flex items-center justify-center px-8 py-3 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:bg-primary/90 transition-all-custom shadow-lg" href="#contact">
+      Get in Touch
+    </a>
+  </div>
+</nav>
+
+<main class="pt-[100px]">
+
+  <!-- ─── HERO ───────────────────────────────────────────────────────────── -->
+  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+
+      <!-- Hero text -->
+      <div class="space-y-10 flex flex-col justify-center order-2 md:order-1">
+        <div class="space-y-6">
+          <h1 class="font-display-lg-mobile text-headline-sm md:text-[2rem] text-primary leading-snug">
+            From the first night home to your baby's first full night of sleep — I've got you.
+          </h1>
+          <p class="font-body-md text-body-md text-on-surface-variant whitespace-nowrap">
+            Postpartum Doula · Newborn Care Specialist · Infant Sleep Trainer
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-5 pt-2">
+          <a class="inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:scale-105 transition-all-custom shadow-xl shadow-primary/10"
+             href="mailto:jennifer@jenjendoula.com">
+            Email Me
+          </a>
+          <a class="inline-flex items-center justify-center px-10 py-4 bg-white/50 border border-brand-blush text-primary font-label-md text-label-md rounded-full hover:bg-brand-blush/20 transition-all-custom"
+             href="sms:+18183186717">
+            Text Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="relative order-1 md:order-2 flex justify-center">
+        <div class="aspect-[4/5] w-full max-w-[480px] organic-blob-hero overflow-hidden ambient-shadow relative z-10 border-8 border-white">
+          <div style="position: absolute; inset: 0; background-image: url('./assets/jen-hero.jpg'); background-size: 130%; background-position: 0% 52%;"></div>
+        </div>
+        <!-- Soft glow — depth only, no hard shapes -->
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-brand-blush/20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-surface-container-high/40 rounded-full blur-2xl -z-10"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── CREDENTIALS STRIP ─────────────────────────────────────────────── -->
+  <section class="pb-16 px-gutter">
+    <div class="max-w-container-max mx-auto bg-primary rounded-full py-10 px-8 md:px-12">
+      <div class="flex flex-wrap justify-center gap-x-10 gap-y-8 items-center text-center">
+
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-white/80" style="font-variation-settings: 'FILL' 1;">verified</span>
+          <span class="font-label-md text-label-md text-white uppercase tracking-wider text-xs">12 Years Experience</span>
+        </div>
+
+        <div class="hidden md:block w-px h-6 bg-white/20"></div>
+
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-white/80" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+          <span class="font-label-md text-label-md text-white uppercase tracking-wider text-xs">Certified Postpartum Doula</span>
+        </div>
+
+        <div class="hidden lg:block w-px h-6 bg-white/20"></div>
+
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-white/80" style="font-variation-settings: 'FILL' 1;">stroller</span>
+          <span class="font-label-md text-label-md text-white uppercase tracking-wider text-xs">Newborn Care Specialist</span>
+        </div>
+
+        <div class="hidden md:block w-px h-6 bg-white/20"></div>
+
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-white/80" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+          <span class="font-label-md text-label-md text-white uppercase tracking-wider text-xs">CPR &amp; First Aid Certified</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ──────────────────────────────────────────────────────────── -->
+  <section class="pt-section-padding-mobile md:pt-section-padding-desktop pb-10 md:pb-14 px-gutter">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="rounded-[2rem] overflow-hidden border border-outline-variant ambient-shadow">
+        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[740px]">
+
+          <!-- Text left -->
+          <div class="p-10 md:p-12 flex flex-col justify-center space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+            <h2 class="font-headline-md text-[1.25rem] md:text-[1.5rem] text-primary leading-snug">
+              Every family deserves to feel held, not overwhelmed, during the biggest transition of their lives.
+            </h2>
+            <p class="leading-relaxed">
+              I didn't come to this work because it was trending. I came because I know what it feels like to need steady hands, a calm presence, and someone who truly sees the whole family — not just the baby.
+            </p>
+            <p class="leading-relaxed">
+              Whether you're a first-timer who read every book, took every class, and came home that first night whispering <em>"now what?"</em> — or this isn't your first rodeo and you simply know the value of a trusted extra set of hands — I'm here for you.
+            </p>
+            <p class="leading-relaxed">
+              I am your right hand, your cheerleader, your voice of reason, your snack maker, and your friend who is going to make this time in your life feel a little more magical and a whole lot more manageable. 12 years in, and no two families are ever the same. That's what I love most.
+            </p>
+          </div>
+
+          <!-- Photo right — full bleed -->
+          <div class="relative min-h-[420px] md:min-h-0">
+            <img alt="Jennifer with baby" class="absolute inset-0 w-full h-full object-cover object-[40%_center]" src="./assets/jen-with-baby.jpg"/>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────────────────────────────── -->
+  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+    <div class="text-center mb-20 space-y-4">
+      <h2 class="font-headline-md text-headline-md text-primary">What my support looks like</h2>
+      <div class="w-24 h-1.5 bg-brand-blush mx-auto rounded-full opacity-40"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
+          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Postpartum Doula Support</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Emotional support, newborn education, feeding guidance, and hands-on help so the whole family feels held during the fourth trimester.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
+          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Overnight Newborn Care</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          I handle all the night wakings, feedings, soothing, and tracking so you get the uninterrupted rest you need to show up fully for your family.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
+          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">child_care</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Newborn Care Specialist</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Expert routines, feeding assessments, safe sleep education, and developmental guidance from birth through early infancy.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+        <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
+          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Infant Sleep Conditioning</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Gentle, individualized sleep plans built around your family's goals — from newborn foundations to toddler transitions.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-16">
+      <p class="font-headline-sm text-headline-sm italic text-primary/60">
+        Every family is different. Reach out for details and pricing.
+      </p>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────────────────── -->
+<footer class="px-gutter pb-16 pt-4" id="contact">
+  <div class="bg-primary rounded-[3rem] max-w-container-max mx-auto flex flex-col items-center text-center py-20 px-gutter space-y-12">
+
+    <div class="space-y-6 flex flex-col items-center">
+      <img alt="JenJenDoula logo" class="w-28 h-28 object-contain" style="filter: brightness(0) invert(1) opacity(0.9);" src="./assets/logo.png"/>
+      <h2 class="font-headline-md text-body-lg md:text-[1.375rem] text-white max-w-xl leading-relaxed">
+        Your baby's first weeks of life shouldn't feel like something to survive. I'm here so they don't.
+      </h2>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-6">
+      <a class="inline-flex items-center justify-center px-12 py-4 bg-white text-primary font-label-md text-label-md rounded-full hover:bg-brand-blush transition-colors shadow-xl"
+         href="mailto:jennifer@jenjendoula.com">
+        Email Me
+      </a>
+      <a class="inline-flex items-center justify-center px-12 py-4 bg-transparent border-2 border-white/30 text-white font-label-md text-label-md rounded-full hover:bg-white/10 transition-colors"
+         href="sms:+18183186717">
+        Text Me
+      </a>
+    </div>
+
+    <div class="pt-12 border-t border-white/10 w-full max-w-xl mx-auto space-y-4">
+      <p class="font-body-md text-body-md text-white/70">
+        Serving growing families in the greater Los Angeles area.
+      </p>
+      <p class="font-body-md text-body-md text-white/40 text-sm">
+        &copy; 2026 JenJenDoula. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
