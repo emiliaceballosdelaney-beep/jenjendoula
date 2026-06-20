@@ -54,8 +54,8 @@
             "full":    "9999px"
           },
           spacing: {
-            "section-padding-mobile":  "64px",
-            "section-padding-desktop": "120px",
+            "section-padding-mobile":  "40px",
+            "section-padding-desktop": "80px",
             "gutter":                  "24px",
             "container-max":           "1200px",
           },
@@ -118,6 +118,50 @@
     .organic-blob-2 {
       border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
     }
+
+    /* ── Hero entrance ─────────────────────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(48px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.97); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .hero-1 { animation: fade-up 1.8s 0.5s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+    .hero-2 { animation: fade-up 1.8s 0.9s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+    .hero-3 { animation: fade-up 1.8s 1.3s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+    .hero-4 { animation: fade-up 1.8s 1.6s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+    .hero-photo { animation: fade-in 2s 0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+
+    /* ── Scroll reveal ─────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.6s cubic-bezier(0.25,0.46,0.45,0.94), transform 1.6s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.3s; }
+    .reveal-delay-3 { transition-delay: 0.15s; }
+    .reveal-delay-4 { transition-delay: 0.3s; }
+
+    /* ── Ambient floating orbs ─────────────────────────────────── */
+    @keyframes orb-drift-1 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%       { transform: translate(40px, -30px) scale(1.05); }
+      66%       { transform: translate(-20px, 20px) scale(0.97); }
+    }
+    @keyframes orb-drift-2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      40%       { transform: translate(-50px, 40px) scale(1.08); }
+      70%       { transform: translate(30px, -20px) scale(0.95); }
+    }
+    @keyframes orb-drift-3 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50%       { transform: translate(25px, 35px) scale(1.04); }
+    }
+    .orb { position: fixed; border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(80px); }
   </style>
 </head>
 
@@ -131,33 +175,37 @@
       <span class="font-headline-sm text-headline-sm text-primary" style="margin-left: -10px;">JenJenDoula</span>
     </a>
     <a class="hidden md:inline-flex items-center justify-center px-8 py-3 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:bg-primary/90 transition-all-custom shadow-lg" href="#contact">
-      Get in Touch
+      Connect With Me
     </a>
   </div>
 </nav>
 
 <main class="pt-[100px]">
+  <!-- Ambient floating orbs -->
+  <div class="orb" style="width:600px;height:600px;top:-100px;left:-150px;background:rgba(93,11,42,0.06);animation:orb-drift-1 18s ease-in-out infinite;"></div>
+  <div class="orb" style="width:500px;height:500px;top:30%;right:-120px;background:rgba(217,172,175,0.14);animation:orb-drift-2 22s ease-in-out infinite;"></div>
+  <div class="orb" style="width:400px;height:400px;bottom:15%;left:10%;background:rgba(93,11,42,0.05);animation:orb-drift-3 16s ease-in-out infinite;"></div>
 
   <!-- ─── HERO ───────────────────────────────────────────────────────────── -->
-  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-[1080px] mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
 
       <!-- Hero text -->
       <div class="space-y-10 flex flex-col justify-center order-2 md:order-1">
         <div class="space-y-6">
-          <h1 class="font-display-lg-mobile text-headline-sm md:text-[2rem] text-primary leading-snug">
+          <h1 class="hero-1 font-display-lg-mobile text-headline-sm md:text-[2rem] text-primary leading-snug">
             From the first night home to your baby's first full night of sleep — I've got you.
           </h1>
-          <p class="font-body-md text-body-md text-on-surface-variant whitespace-nowrap">
-            Postpartum Doula · Newborn Care Specialist · Infant Sleep Trainer
+          <p class="hero-2 font-body-md text-[1.125rem] text-on-surface-variant md:whitespace-nowrap">
+            Postpartum Doula · Newborn Specialist · Infant Sleep Trainer
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-5 pt-2">
-          <a class="inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:scale-105 transition-all-custom shadow-xl shadow-primary/10"
+          <a class="hero-3 inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:scale-105 transition-all-custom shadow-xl shadow-primary/10"
              href="mailto:jennifer@jenjendoula.com">
             Email Me
           </a>
-          <a class="inline-flex items-center justify-center px-10 py-4 bg-white/50 border border-brand-blush text-primary font-label-md text-label-md rounded-full hover:bg-brand-blush/20 transition-all-custom"
+          <a class="hero-4 inline-flex items-center justify-center px-10 py-4 bg-white/50 border border-brand-blush text-primary font-label-md text-label-md rounded-full hover:bg-brand-blush/20 transition-all-custom"
              href="sms:+18183186717">
             Text Me
           </a>
@@ -165,8 +213,8 @@
       </div>
 
       <!-- Hero image -->
-      <div class="relative order-1 md:order-2 flex justify-center">
-        <div class="aspect-[4/5] w-full max-w-[480px] organic-blob-hero overflow-hidden ambient-shadow relative z-10 border-8 border-white">
+      <div class="hero-photo relative order-1 md:order-2 flex justify-center">
+        <div class="aspect-[4/5] w-full max-w-[480px] organic-blob-hero overflow-hidden relative z-10" style="box-shadow: 0 0 8px 4px rgba(255,255,255,0.85), 0 0 20px 8px rgba(240,210,212,0.50), 0 0 40px 16px rgba(217,172,175,0.25), 0 12px 40px -8px rgba(93,11,42,0.12);">
           <div style="position: absolute; inset: 0; background-image: url('./assets/jen-hero.jpg'); background-size: 130%; background-position: 0% 52%;"></div>
         </div>
         <!-- Photo halo glows -->
@@ -179,8 +227,8 @@
   </section>
 
   <!-- ─── CREDENTIALS STRIP ─────────────────────────────────────────────── -->
-  <section class="pb-16 px-gutter">
-    <div class="max-w-container-max mx-auto bg-primary rounded-full py-10 px-8 md:px-12">
+  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter">
+    <div class="reveal max-w-5xl mx-auto bg-primary rounded-full py-10 px-8 md:px-12">
       <div class="flex flex-wrap justify-center gap-x-10 gap-y-8 items-center text-center">
 
         <div class="flex flex-col items-center gap-2">
@@ -214,16 +262,16 @@
   </section>
 
   <!-- ─── ABOUT ──────────────────────────────────────────────────────────── -->
-  <section class="pt-section-padding-mobile md:pt-section-padding-desktop pb-10 md:pb-14 px-gutter">
+  <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter">
     <div class="max-w-5xl mx-auto">
 
-      <div class="rounded-[2rem] overflow-hidden border border-outline-variant ambient-shadow">
+      <div class="reveal rounded-[2rem] overflow-hidden border border-outline-variant ambient-shadow">
         <div class="grid grid-cols-1 md:grid-cols-2 min-h-[740px]">
 
           <!-- Text left -->
           <div class="p-10 md:p-12 flex flex-col justify-center space-y-6 font-body-lg text-body-lg text-on-surface-variant">
-            <h2 class="font-headline-md text-[1.25rem] md:text-[1.5rem] text-primary leading-snug">
-              Every family deserves to feel held, not overwhelmed, during the biggest transition of their lives.
+            <h2 class="font-headline-md text-[1.5rem] md:text-[1.875rem] text-primary leading-snug">
+              Why families choose me.
             </h2>
             <p class="leading-relaxed">
               I didn't come to this work because it was trending. I came because I know what it feels like to need steady hands, a calm presence, and someone who truly sees the whole family — not just the baby.
@@ -249,52 +297,52 @@
 
   <!-- ─── SERVICES ──────────────────────────────────────────────────────── -->
   <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
-    <div class="text-center mb-20 space-y-4">
-      <h2 class="font-headline-md text-headline-md text-primary">What my support looks like</h2>
-      <div class="w-24 h-1.5 bg-brand-blush mx-auto rounded-full opacity-40"></div>
+    <div class="reveal text-center mb-8 space-y-4">
+      <h2 class="font-headline-md text-[1.5rem] md:text-headline-md text-primary">What my support looks like</h2>
+      <div class="w-24 h-px bg-brand-blush mx-auto rounded-full opacity-40"></div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
 
       <!-- Card 1 -->
-      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+      <div class="reveal reveal-delay-1 bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
         <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
           <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Postpartum Doula Support</h3>
+        <h3 class="font-headline-sm text-[1.125rem] md:text-headline-sm text-primary mb-4">Postpartum Doula Support</h3>
         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
           Emotional support, newborn education, feeding guidance, and hands-on help so the whole family feels held during the fourth trimester.
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+      <div class="reveal reveal-delay-2 bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
         <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
           <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">bedtime</span>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Overnight Newborn Care</h3>
+        <h3 class="font-headline-sm text-[1.125rem] md:text-headline-sm text-primary mb-4">Overnight Care</h3>
         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
           I handle all the night wakings, feedings, soothing, and tracking so you get the uninterrupted rest you need to show up fully for your family.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+      <div class="reveal reveal-delay-3 bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
         <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
-          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">child_care</span>
+          <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">crib</span>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Newborn Care Specialist</h3>
+        <h3 class="font-headline-sm text-[1.125rem] md:text-headline-sm text-primary mb-4">Newborn Specialist</h3>
         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
           Expert routines, feeding assessments, safe sleep education, and developmental guidance from birth through early infancy.
         </p>
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
+      <div class="reveal reveal-delay-4 bg-white rounded-3xl p-10 ambient-shadow transition-all-custom border-2 border-transparent hover:border-brand-blush/30 hover:-translate-y-2 group">
         <div class="w-16 h-16 rounded-2xl bg-brand-blush/10 flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
           <span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Infant Sleep Conditioning</h3>
+        <h3 class="font-headline-sm text-[1.125rem] md:text-headline-sm text-primary mb-4">Infant Sleep Conditioning</h3>
         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
           Gentle, individualized sleep plans built around your family's goals — from newborn foundations to toddler transitions.
         </p>
@@ -303,8 +351,8 @@
     </div>
 
     <div class="text-center mt-16">
-      <p class="font-headline-sm text-headline-sm italic text-primary/60">
-        Every family is different. Reach out for details and pricing.
+      <p class="font-body-md text-[1.25rem] italic text-primary/60 leading-relaxed">
+        Every family is different.<br>Reach out for details and pricing.
       </p>
     </div>
   </section>
@@ -314,7 +362,7 @@
 
 <!-- ─── FOOTER ────────────────────────────────────────────────────────────── -->
 <footer class="px-gutter pb-16 pt-4" id="contact">
-  <div class="bg-primary rounded-[3rem] max-w-container-max mx-auto flex flex-col items-center text-center py-20 px-gutter space-y-12">
+  <div class="bg-primary rounded-[3rem] max-w-5xl mx-auto flex flex-col items-center text-center py-20 px-gutter space-y-12">
 
     <div class="space-y-6 flex flex-col items-center">
       <img alt="JenJenDoula logo" class="w-28 h-28 object-contain" style="filter: brightness(0) invert(1) opacity(0.9);" src="./assets/logo.png"/>
@@ -346,5 +394,16 @@
   </div>
 </footer>
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
